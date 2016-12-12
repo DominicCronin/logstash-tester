@@ -104,7 +104,8 @@ Since an example is (sometimes) worth a thousand words, check out the 'example' 
 **Other useful info**
 -   The Logstash filter config files should follow a naming convention
     (```[some-custom-label].filter.conf```).
-    They'll be loaded in alphabetical order.
+    They'll be loaded in alphabetical order. If you don't follow this convention, and the rspec tests don't pick up your files, you may see errors like this:
+        "LogStash::ConfigurationError: Expected one of #, input, filter, output at line 1, column 1"
 
 -   Logstash-tester assumes the patternsdir setting in grok filters is set to ```/etc/logstash/patterns```.
 
